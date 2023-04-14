@@ -1,0 +1,85 @@
+:root {
+  --main-bg-color: #180a0a;
+  --secondColor: #711a75;
+  --thirdColor: #f10086;
+  --fourthColor: #f582a7;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--main-bg-color);
+  transition: 200ms;
+}
+
+h1 {
+  color: var(--fourthColor);
+  font-size: 30px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-top: 1em;
+  color: var(--fourthColor);
+  text-align: center;
+}
+
+main {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid var(--thirdColor);
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 50px;
+  background: #340d36;
+}
+
+textarea {
+  width: 500px;
+  height: 200px;
+  border: 4px solid var(--secondColor);
+  background: var(--fourthColor);
+  caret-color: var(--thirdColor);
+  margin-top: 20px;
+  padding: 2px;
+}
+textarea:hover {
+  background: #f7b7cb;
+  font-size: 18px;
+}
+
+button {
+  background: var(--thirdColor);
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+button:hover {
+  background: var(--fourthColor);
+}
+button:focus,
+textarea:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    width: 100vw;
+    margin-top: 0;
+    padding: 15px;
+    height: 100vh;
+  }
+  textarea {
+    width: 100%;
+  }
+}
